@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tebligat_listesi" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1ea6d139-3560-4137-8d74-92280d778dd3">
+	<property name="ireport.zoom" value="3.138428376721005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="tarih" class="java.lang.String"/>
+	<field name="brcd2" class="java.lang.Object"/>
+	<field name="brcd" class="java.lang.Object"/>
+	<field name="barcodeNumber" class="java.lang.String"/>
+	<field name="barcodeNumber2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="28">
+			<staticText>
+				<reportElement x="202" y="3" width="192" height="20" uuid="4130112c-4d92-473b-a52f-5bf103526e47"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[YKS TRAFİK BARKOD LİSTESİ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="3" width="100" height="20" uuid="0c345015-2491-4672-80e4-99227b0b8b0f"/>
+				<textElement>
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarih}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="34" height="20" uuid="308d5bc2-ab17-40ae-954d-09491e10f11c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="140" height="20" uuid="929c69b4-b21d-4401-a3e0-ac2df37159bc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[BARKOD NUMARASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="126" height="20" uuid="4bf1f0cf-96f5-4c73-b2af-45045a0b648d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[BARKOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="0" width="129" height="20" uuid="fc6b4cc6-c6a6-4c81-afac-e6859db710ff"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[BARKOD NUMARASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="0" width="126" height="20" uuid="962c2937-a639-425a-93e6-66571a8e558f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[BARKOD]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="30">
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="34" height="30" uuid="7e9285ac-40c6-4ff4-a0dc-1470037dfc4f"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="0" width="140" height="30" uuid="453d9c06-0bef-4d9e-a71d-a99e1e4cb9e4"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barcodeNumber2}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="429" y="0" width="126" height="30" uuid="e14bc78f-909f-4428-90bd-edc42b209b05"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<imageExpression><![CDATA[$F{brcd2}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="163" y="0" width="126" height="30" uuid="f8a4837b-b21e-4513-9408-faec1140e239"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<imageExpression><![CDATA[$F{brcd}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="34" y="0" width="129" height="30" uuid="ebc2089f-99a8-48ff-a61b-4916eb851e05"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barcodeNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
